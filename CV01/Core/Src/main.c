@@ -95,17 +95,21 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint8_t array[] = {1,0,1,0,1,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0};
+  /*uint8_t array[] = {1,0,1,0,1,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0};
+   *
+   */
   while (1)
   {
-	  for (uint32_t i = 0; i < 32; ++i){
-		if (array[i] ==1){
-			LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
-		}
-		else{
-			LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
-		}
-		LL_mDelay(200);
+	  uint32_t bit_array = 0b10101001110111011100101010000000;
+	  for (uint32_t i = 0; i < 31; ++i){
+		  if (bit_array &(1uL<<31)){
+			  LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
+		  }
+		  else{
+			  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+		  }
+		  LL_mDelay(200);
+		  bit_array = bit_array<<1;
 	  }
 
     /* USER CODE END WHILE */
