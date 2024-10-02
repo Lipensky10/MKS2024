@@ -74,7 +74,7 @@ void button(void){
 	static uint32_t delay = 0;
 
 	uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
-	uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+	//uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
 
 	if (Tick > 40 + delay){
 		if (old_s2 && !new_s2) { // falling edge

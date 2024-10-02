@@ -33,7 +33,6 @@
 /* USER CODE BEGIN PD */
 #define LED_TIME_BLINK 300
 #define LED_TIME_SHORT 100
-#define LED_TIME_LONG 1000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -81,12 +80,7 @@ void button(void){
 			off_time = Tick + LED_TIME_SHORT;
 			LL_GPIO_SetOutputPin(LED1_GPIO_Port, LED1_Pin);
 		}
-		if (old_s1 && !new_s1) { // falling edge
-					off_time = Tick + LED_TIME_LONG;
-					LL_GPIO_SetOutputPin(LED1_GPIO_Port, LED1_Pin);
-				}
 		old_s2 = new_s2;
-		old_s1 = new_s1;
 		delay = Tick;
 	}
 
@@ -137,7 +131,6 @@ int main(void)
   while (1)
   {
 	  blink();
-	  button();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

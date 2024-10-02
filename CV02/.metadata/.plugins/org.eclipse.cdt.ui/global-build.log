@@ -203,3 +203,428 @@ Finished building: default.size.stdout
  
 Finished building: CV02.list
  
+09:22:38 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:69:6: warning: type of 'button' defaults to 'int' [-Wimplicit-int]
+   69 | void button(button){
+      |      ^~~~~~
+../Core/Src/main.c:73:17: error: 'off_time' undeclared (first use in this function)
+   73 |                 off_time = Tick + LED_TIME_SHORT;
+      |                 ^~~~~~~~
+../Core/Src/main.c:73:17: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:88:5: warning: 'main' is normally a non-static function [-Wmain]
+   88 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:176:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  176 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:236:13: error: invalid storage class for function 'MX_GPIO_Init'
+  236 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:331:1: error: expected declaration or statement at end of input
+  331 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:52:13: warning: 'MX_GPIO_Init' used but never defined
+   52 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:53:13: warning: 'MX_USART2_UART_Init' used but never defined
+   53 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:322:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  322 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:236:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  236 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:176:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  176 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:136:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  136 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:88:5: warning: 'main' defined but not used [-Wunused-function]
+   88 | int main(void)
+      |     ^~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:24:26 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:69:6: warning: type of 'button' defaults to 'int' [-Wimplicit-int]
+   69 | void button(button){
+      |      ^~~~~~
+../Core/Src/main.c:88:5: warning: 'main' is normally a non-static function [-Wmain]
+   88 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:176:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  176 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:236:13: error: invalid storage class for function 'MX_GPIO_Init'
+  236 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:331:1: error: expected declaration or statement at end of input
+  331 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:52:13: warning: 'MX_GPIO_Init' used but never defined
+   52 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:53:13: warning: 'MX_USART2_UART_Init' used but never defined
+   53 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:322:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  322 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:236:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  236 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:176:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  176 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:136:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  136 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:88:5: warning: 'main' defined but not used [-Wunused-function]
+   88 | int main(void)
+      |     ^~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:36:05 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:69:6: warning: type of 'button' defaults to 'int' [-Wimplicit-int]
+   69 | void button(button){
+      |      ^~~~~~
+../Core/Src/main.c:71:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before 's1'
+   71 |         static uint32_t old s1;
+      |                             ^~
+../Core/Src/main.c:71:29: error: 's1' undeclared (first use in this function)
+../Core/Src/main.c:71:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:83:25: error: 'tick' undeclared (first use in this function); did you mean 'Tick'?
+   83 |                 delay = tick;
+      |                         ^~~~
+      |                         Tick
+../Core/Src/main.c:96:5: warning: 'main' is normally a non-static function [-Wmain]
+   96 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:184:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  184 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:244:13: error: invalid storage class for function 'MX_GPIO_Init'
+  244 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:1: error: expected declaration or statement at end of input
+  339 | }
+      | ^
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:52:13: warning: 'MX_GPIO_Init' used but never defined
+   52 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:53:13: warning: 'MX_USART2_UART_Init' used but never defined
+   53 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:330:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  330 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:244:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  244 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:184:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  184 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:144:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  144 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:96:5: warning: 'main' defined but not used [-Wunused-function]
+   96 | int main(void)
+      |     ^~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:36:44 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:69:6: warning: type of 'button' defaults to 'int' [-Wimplicit-int]
+   69 | void button(button){
+      |      ^~~~~~
+../Core/Src/main.c:71:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before 's1'
+   71 |         static uint32_t old s1;
+      |                             ^~
+../Core/Src/main.c:71:29: error: 's1' undeclared (first use in this function)
+../Core/Src/main.c:71:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:96:5: warning: 'main' is normally a non-static function [-Wmain]
+   96 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:184:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  184 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:244:13: error: invalid storage class for function 'MX_GPIO_Init'
+  244 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:1: error: expected declaration or statement at end of input
+  339 | }
+      | ^
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:52:13: warning: 'MX_GPIO_Init' used but never defined
+   52 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:53:13: warning: 'MX_USART2_UART_Init' used but never defined
+   53 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:330:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  330 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:244:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  244 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:184:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  184 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:144:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  144 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:96:5: warning: 'main' defined but not used [-Wunused-function]
+   96 | int main(void)
+      |     ^~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:37:19 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:71:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before 's1'
+   71 |         static uint32_t old s1;
+      |                             ^~
+../Core/Src/main.c:71:29: error: 's1' undeclared (first use in this function)
+../Core/Src/main.c:71:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:96:5: warning: 'main' is normally a non-static function [-Wmain]
+   96 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:184:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  184 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:244:13: error: invalid storage class for function 'MX_GPIO_Init'
+  244 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:339:1: error: expected declaration or statement at end of input
+  339 | }
+      | ^
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:52:13: warning: 'MX_GPIO_Init' used but never defined
+   52 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:53:13: warning: 'MX_USART2_UART_Init' used but never defined
+   53 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:330:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  330 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:244:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  244 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:184:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  184 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:144:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  144 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:96:5: warning: 'main' defined but not used [-Wunused-function]
+   96 | int main(void)
+      |     ^~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:37:50 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:71:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before 's1'
+   71 |         static uint32_t old s1;
+      |                             ^~
+../Core/Src/main.c:71:29: error: 's1' undeclared (first use in this function)
+../Core/Src/main.c:71:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:38:14 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c:71:25: warning: unused variable 'old_s1' [-Wunused-variable]
+   71 |         static uint32_t old_s1;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
+09:39:16 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-size  CV02.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+09:39:39 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-size  CV02.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+09:40:48 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c:71:25: warning: unused variable 'old_s1' [-Wunused-variable]
+   71 |         static uint32_t old_s1;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
+09:43:41 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c:71:25: warning: unused variable 'old_s1' [-Wunused-variable]
+   71 |         static uint32_t old_s1;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
+09:45:36 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:76:18: warning: unused variable 'new_s1' [-Wunused-variable]
+   76 |         uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~~~~
+../Core/Src/main.c:71:25: warning: unused variable 'old_s1' [-Wunused-variable]
+   71 |         static uint32_t old_s1;
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
+09:46:03 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
+09:49:26 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5108	      4	   1572	   6684	   1a1c	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
+09:49:39 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	      4	   1588	   6904	   1af8	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
+09:53:16 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button':
+../Core/Src/main.c:84:32: error: 'new_s1' undeclared (first use in this function); did you mean 'new_s2'?
+   84 |                 if (old_s1 && !new_s1) { // falling edge
+      |                                ^~~~~~
+      |                                new_s2
+../Core/Src/main.c:84:32: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:53:47 **** Incremental Build of configuration Debug for project CV02 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "CV02.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\240652\MKS2024\CV02\CV02\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CV02.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CV02.elf
+ 
+arm-none-eabi-size  CV02.elf 
+arm-none-eabi-objdump -h -S CV02.elf  > "CV02.list"
+   text	   data	    bss	    dec	    hex	filename
+   5376	      4	   1588	   6968	   1b38	CV02.elf
+Finished building: default.size.stdout
+ 
+Finished building: CV02.list
+ 
