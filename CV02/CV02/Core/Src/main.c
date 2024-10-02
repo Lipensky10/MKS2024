@@ -34,6 +34,7 @@
 #define LED_TIME_BLINK 300
 #define LED_TIME_SHORT 100
 #define LED_TIME_LONG 1000
+#define Debounce_time 5
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -67,11 +68,12 @@ void blink(void){
 	}
 }
 
-void button(void){
+/*void button(void){
 	static uint32_t old_s2;
 	static uint32_t old_s1;
 	static uint32_t off_time;
 	static uint32_t delay = 0;
+	static uint16_t debounce = 0xFFFF;
 
 	uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
 	uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
@@ -93,6 +95,29 @@ void button(void){
 	if (Tick > off_time) {
 		LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
 	}
+}
+*/
+void btn(void){
+	static uint16_t Debounce = 0x0000;
+	//static uint32_t delay = 0;
+	static uint32_t Last_update = 0;
+	//uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+	uint32_t Current_time = Tick;
+
+
+	if ((Current_time - Last_update) >= Debounce_time){
+		Debounce = Debounce << 1;
+		if (!LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin)){
+			Debounce |= 0x0001;
+
+		}
+		Last_update = Current_time;
+		if(Debounce == 0x7FFF){
+
+			LL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		}
+	}
+
 }
 /* USER CODE END 0 */
 
@@ -137,7 +162,7 @@ int main(void)
   while (1)
   {
 	  blink();
-	  button();
+	  btn();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
