@@ -164,7 +164,7 @@ int main(void)
 	  else if(btn){
 		  if(HAL_Get_Tick - time >= 1000){
 			  btn = 0;
-			  sct_value((raw_pot * 501) / 4096, raw_pot * 9 / 4096)
+			  sct_value((raw_pot * 501) / 4096, raw_pot * 9 / 4096);
 		  }
 	  }
 	  else {
